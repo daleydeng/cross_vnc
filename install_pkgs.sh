@@ -5,4 +5,5 @@ dnf install -y google-chrome-stable
 snap install clion --classic
 snap install pycharm-professional --classic
 snap install webstorm --classic
+snap install intellij-idea-ultimate --classic
 snap install code
