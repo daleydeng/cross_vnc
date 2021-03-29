@@ -1,0 +1,14 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+X-SnapInstanceName=pycharm-professional
+Version=1.0
+Type=Application
+Name=PyCharm Professional Edition
+Icon=/var/lib/snapd/snap/pycharm-professional/237/bin/pycharm.png
+Exec=/home/vision/qtconda/bin/python /home/vision/bin/run_idea.py python
+# Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/pycharm-professional_pycharm-professional.desktop /var/lib/snapd/snap/bin/pycharm-professional %f
+Comment=Python IDE for Professional Developers
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-pycharm
+StartupNotify=true

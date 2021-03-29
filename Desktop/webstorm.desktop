@@ -1,0 +1,14 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+X-SnapInstanceName=webstorm
+Version=1.0
+Type=Application
+Name=WebStorm
+Icon=/var/lib/snapd/snap/webstorm/198/bin/webstorm.png
+Exec=/home/vision/qtconda/bin/python /home/vision/bin/run_idea.py web
+# Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/webstorm_webstorm.desktop /var/lib/snapd/snap/bin/webstorm %f
+Comment=The smartest JavaScript IDE
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-webstorm
+StartupNotify=true

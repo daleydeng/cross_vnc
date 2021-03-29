@@ -1,0 +1,14 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+X-SnapInstanceName=intellij-idea-ultimate
+Version=1.0
+Type=Application
+Name=IntelliJ IDEA Ultimate Edition
+Icon=/var/lib/snapd/snap/intellij-idea-ultimate/285/bin/idea.png
+Exec=/home/vision/qtconda/bin/python /home/vision/bin/run_idea.py java
+# Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/intellij-idea-ultimate_intellij-idea-ultimate.desktop /var/lib/snapd/snap/bin/intellij-idea-ultimate %f
+Comment=Capable and Ergonomic IDE for JVM
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-idea
+StartupNotify=true

@@ -10,7 +10,8 @@ def process_ide(ide, exe=None):
         exe = ide
 
     display = os.environ['DISPLAY']
-    cfg_dir = osp.expanduser(f'~/.idea/{ide}/session{display}')
+    ide_cfg_dir = osp.expanduser(f"~/.idea/{ide}")
+    cfg_dir = f'{ide_cfg_dir}/session{display}'
     os.makedirs(cfg_dir, exist_ok=True)
 
     bin_path = shutil.which(exe)
@@ -21,6 +22,8 @@ def process_ide(ide, exe=None):
     prop.update({
         "idea.config.path":  cfg_dir + '/config',
         'idea.system.path': cfg_dir + '/system',
+        'idea.log.path': cfg_dir + '/log',
+        'idea.plugins.path': ide_cfg_dir + '/plugins',
     })
 
     o_prop_f = cfg_dir + '/idea.properties'
@@ -34,12 +37,14 @@ def process_ide(ide, exe=None):
 
 def main(ide):
     ide = ide.lower()
-    if ide == 'clion':
+    if ide == 'c':
         process_ide('clion')
-    elif ide == 'pycharm':
+    elif ide == 'python':
         process_ide('pycharm', 'pycharm-professional')
-    elif ide == 'webstorm':
+    elif ide == 'web':
         process_ide('webstorm')
+    elif ide == 'java':
+        process_ide('idea', 'intellij-idea-ultimate')
     else:
         raise RuntimeError(f"{ide} not found")
 

@@ -1,0 +1,14 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+X-SnapInstanceName=clion
+Version=1.0
+Type=Application
+Name=CLion
+Icon=/snap/clion/current/bin/clion.png
+Comment=A cross-platform IDE for C and C++
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-clion
+Exec=/home/vision/qtconda/bin/python /home/vision/bin/run_idea.py c
+# Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/clion_clion.desktop /var/lib/snapd/snap/bin/clion %f
+Icon[en_US]=/snap/clion/current/bin/clion.png
