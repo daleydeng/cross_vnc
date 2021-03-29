@@ -9,8 +9,8 @@ def process_ide(ide, exe=None):
     if exe is None:
         exe = ide
 
-    display = os.environ['DISPLAY'][1:]
-    cfg_dir = osp.expanduser(f'~/.idea/{ide}/{display}')
+    display = os.environ['DISPLAY']
+    cfg_dir = osp.expanduser(f'~/.idea/{ide}/session{display}')
     os.makedirs(cfg_dir, exist_ok=True)
 
     bin_path = shutil.which(exe)
